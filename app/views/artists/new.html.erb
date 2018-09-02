@@ -1,0 +1,11 @@
+<h1> New Artist Form </h1>
+
+<%= form_for :artists, url: "/artists", method: "post" do |f| %>
+  <%= f.label :artist_name %>
+  <%= text_field_tag "artist[name]", params[:name], :id => 'artist[name]' %>
+
+  <%= f.label :artist_bio %>
+  <%= text_field_tag "artist[bio]", params[:bio], :id => 'artist[bio]' %>
+
+  <%= f.submit 'Create Artist' %>
+<% end %>

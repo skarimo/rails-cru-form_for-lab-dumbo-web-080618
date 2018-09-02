@@ -1,0 +1,14 @@
+<h1>Edit Song Form</h1>
+
+<%= form_for @song do |f|%>
+  <%=  f.label :song_name %>
+  <%= text_field_tag "song[name]", params[:name], :id => 'song[name]', value: @song.name  %>
+
+  <%= f.label :song_artist_id %>
+  <%= text_field_tag "song[artist_id]", @song.artist.id %>
+
+  <%= f.label :song_genre_id %>
+  <%= text_field_tag "song[genre_id]", @song.genre.id %>
+
+  <%= f.submit 'Update Song' %>
+<% end %>

@@ -1,0 +1,5 @@
+<% @songs.each do |song| %>
+<p><%= song.name %> </p>
+  <li><%= song.artist.name %></li>
+  <li><%= song.genre.name %></li>
+<% end %>
